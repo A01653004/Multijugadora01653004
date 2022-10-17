@@ -11,12 +11,4 @@ public class SwordScript : MonoBehaviour
 
     [SerializeField] private float effectTime;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Damage dam = other.GetComponent<Damage>();
-            StartCoroutine(dam.CallEffectTimeSword(gameObject, 10, 50));
-        }
-    }
 }
